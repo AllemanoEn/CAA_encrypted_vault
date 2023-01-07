@@ -34,7 +34,7 @@ pub(crate) fn recover_a_shard_if_user_exists(company: &Company, user_name: &str,
 
     let user_exists = vec_users.iter().any(|user| {
         if user.name == user_name {
-            user_shards = user.shard.clone();
+            user_shards = user.ciphered_shard.clone();
             user_salt = user.salt.clone();
             true
         } else {
@@ -85,7 +85,7 @@ pub(crate) struct MagicTable {
 #[derive(Serialize, Deserialize, Clone)]
 pub(crate) struct User {
     pub name: String,
-    pub shard: Vec<u8>,
+    pub ciphered_shard: Vec<u8>,
     pub salt: Vec<u8>
 }
 

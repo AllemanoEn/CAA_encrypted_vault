@@ -89,22 +89,22 @@ pub fn init_server_architecture(){
     // Create all users and their respective data
     let user1 = User{
         name: "Alice".to_string(),
-        shard: shard1_ciphered.0,
+        ciphered_shard: shard1_ciphered.0,
         salt: hash1_parts.1.to_vec()
     };
     let user2 = User{
         name: "Bob".to_string(),
-        shard: shard2_ciphered.0,
+        ciphered_shard: shard2_ciphered.0,
         salt: hash2_parts.1.to_vec()
     };
     let user3 = User{
         name: "Carol".to_string(),
-        shard: shard3_ciphered.0,
+        ciphered_shard: shard3_ciphered.0,
         salt: hash3_parts.1.to_vec()
     };
     let user4 = User{
         name: "Eve".to_string(),
-        shard: shard4_ciphered.0,
+        ciphered_shard: shard4_ciphered.0,
         salt: hash4_parts.1.to_vec()
     };
 
